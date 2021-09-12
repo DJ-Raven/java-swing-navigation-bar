@@ -1,4 +1,4 @@
-package com.raven.transaction;
+package com.raven.transitions;
 
 import java.awt.CardLayout;
 import java.awt.Component;
@@ -6,11 +6,11 @@ import javax.swing.JLayeredPane;
 import net.miginfocom.swing.MigLayout;
 import org.jdesktop.animation.timing.Animator;
 
-public class PanelTransaction extends javax.swing.JPanel {
+public class PanelTransitions extends javax.swing.JPanel {
 
     private JLayeredPane body;
 
-    public PanelTransaction() {
+    public PanelTransitions() {
         initComponents();
         setOpaque(false);
         setLayout(new MigLayout("fill", "0[fill]0", "0[fill]0"));
@@ -20,10 +20,10 @@ public class PanelTransaction extends javax.swing.JPanel {
     }
 
     public void display(Component form, Animator animator) {
-        TransactionForm add = (TransactionForm) form;
+        TransitionsForm add = (TransitionsForm) form;
         add.addTarget(animator, body);
         if (body.getComponentCount() > 0) {
-            TransactionForm remove = (TransactionForm) body.getComponent(0);
+            TransitionsForm remove = (TransitionsForm) body.getComponent(0);
             remove.removeTarget();
         } else {
             add.setAlpha(1f);

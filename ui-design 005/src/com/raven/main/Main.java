@@ -47,7 +47,7 @@ public class Main extends javax.swing.JFrame {
     private void initComponents() {
 
         navigationBar1 = new com.raven.swing.NavigationBar();
-        panelTransaction1 = new com.raven.transaction.PanelTransaction();
+        panelTransaction1 = new com.raven.transitions.PanelTransitions();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setUndecorated(true);
@@ -128,6 +128,6 @@ public class Main extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private com.raven.swing.NavigationBar navigationBar1;
-    private com.raven.transaction.PanelTransaction panelTransaction1;
+    private com.raven.transitions.PanelTransitions panelTransaction1;
     // End of variables declaration//GEN-END:variables
 }

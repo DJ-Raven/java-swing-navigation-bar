@@ -5,13 +5,13 @@
  */
 package com.raven.form;
 
-import com.raven.transaction.TransactionForm;
+import com.raven.transitions.TransitionsForm;
 
 /**
  *
  * @author RAVEN
  */
-public class Form2 extends TransactionForm {
+public class Form2 extends TransitionsForm {
 
     /**
      * Creates new form Form

@@ -1,4 +1,4 @@
-package com.raven.transaction;
+package com.raven.transitions;
 
 import java.awt.AlphaComposite;
 import java.awt.Graphics;
@@ -8,7 +8,7 @@ import org.jdesktop.animation.timing.Animator;
 import org.jdesktop.animation.timing.TimingTarget;
 import org.jdesktop.animation.timing.TimingTargetAdapter;
 
-public class TransactionForm extends javax.swing.JPanel {
+public class TransitionsForm extends javax.swing.JPanel {
 
     public void setAlpha(float alpha) {
         this.alpha = alpha;
@@ -21,7 +21,7 @@ public class TransactionForm extends javax.swing.JPanel {
     private float alpha = 1f;
     private boolean show = true;
 
-    public TransactionForm() {
+    public TransitionsForm() {
         initComponents();
         setOpaque(false);
         target = new TimingTargetAdapter() {
@@ -40,7 +40,7 @@ public class TransactionForm extends javax.swing.JPanel {
             public void end() {
                 if (!show) {
                     animator.removeTarget(target);
-                    body.remove(TransactionForm.this);
+                    body.remove(TransitionsForm.this);
                     body.repaint();
                     body.revalidate();
                 }

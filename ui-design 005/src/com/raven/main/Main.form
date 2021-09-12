@@ -57,7 +57,7 @@
         </DimensionLayout>
       </Layout>
     </Container>
-    <Component class="com.raven.transaction.PanelTransaction" name="panelTransaction1">
+    <Component class="com.raven.transitions.PanelTransitions" name="panelTransaction1">
     </Component>
   </SubComponents>
 </Form>
