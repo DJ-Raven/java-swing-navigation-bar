@@ -6,6 +6,7 @@ import com.raven.form.Form3;
 import com.raven.form.Form4;
 import com.raven.form.Form5;
 import com.raven.swing.EventNavigationBar;
+import com.raven.swing.NavigationBackgroundColor;
 import java.awt.Color;
 import javax.swing.ImageIcon;
 
@@ -40,6 +41,14 @@ public class Main extends javax.swing.JFrame {
 
             }
         });
+        NavigationBackgroundColor nb = new NavigationBackgroundColor();
+        nb.apply(getContentPane());
+        nb.addColor(0, new Color(153, 153, 255));
+        nb.addColor(1, new Color(153, 225, 255));
+        nb.addColor(2, new Color(255, 153, 218));
+        nb.addColor(3, new Color(126, 209, 132));
+        nb.addColor(4, new Color(226, 222, 131));
+        navigationBar1.setnavigationBackgroundColor(nb);
     }
 
     @SuppressWarnings("unchecked")

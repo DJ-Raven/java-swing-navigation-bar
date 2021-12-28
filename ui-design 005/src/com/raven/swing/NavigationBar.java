@@ -211,6 +211,7 @@ public class NavigationBar extends javax.swing.JPanel {
                 currentX = targetX;
                 lastTargetX = targetX;
                 animationIcon = 1f * animationIconTarget;
+                animator.start();
                 repaint();
                 runBeforeEvent();
             }
@@ -235,5 +236,20 @@ public class NavigationBar extends javax.swing.JPanel {
 
     public Animator getAnimator() {
         return animator;
+    }
+
+    public void setnavigationBackgroundColor(NavigationBackgroundColor nb) {
+        addEvent(new EventNavigationBar() {
+            @Override
+            public void beforeSelected(int index) {
+                animator.removeTarget(nb.getTarget());
+                animator.addTarget(nb.createTarget(oldSelectedIndex, index));
+            }
+
+            @Override
+            public void afterSelected(int index) {
+
+            }
+        });
     }
 }
